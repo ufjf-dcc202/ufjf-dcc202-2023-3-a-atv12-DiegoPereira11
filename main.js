@@ -1,10 +1,15 @@
 //main.js
 
-leFormulario();
- 
-function leFormulario() {
-    const fruta = document.entrada.fruta.value;
-    const quantidade = document.entrada.fruta.value;
+document.entrada.addEventListener('submit', leFormulario);
 
-    console.log(fruta, quantidade);
+const olJoao = document.querySelector("#oljoao");
+const olMaria = document.querySelector("#olMaria")
+
+function leFormulario(event) {
+    event.preventDefault();
+    const fruta = document.entrada.fruta.value;
+    const quantidade = document.entrada.quantidade.value;
+
+    console.log(`fruta: ${fruta} quantidade: ${quantidade}` );
+    document.entrada.submit();
 }
